@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Collapse Example</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #f1f1f1;
+      }
+      .custom-container {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .card-custom {
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .header-toggle {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .timeline-icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #f1f1f1;
+        border-radius: 50%;
+        margin: 15px;
+      }
+
+      .timeline-icon::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 40px;
+        background-color: #e0e0e0;
+      }
+
+      .timeline-icon:last-child::after {
+        display: none;
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .timeline-icon i {
+        font-size: 20px;
+        color: #000;
+      }
+      .fa-circle-plus {
+        color: #000;
+        font-size: 20px;
+      }
+      .hover-title:hover {
+        color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-container py-5">
+      <!-- Education Section -->
+      <div class="card card-custom bg-white">
+        <div
+          class="header-toggle"
+          data-bs-toggle="collapse"
+          data-bs-target="#educationCollapse"
+          aria-expanded="true"
+          aria-controls="educationCollapse"
+        >
+          <h5 class="mb-0 fs-4 fw-bold hover-title">
+            Education <span><i class="fa-solid fa-chevron-right"></i></span>
+          </h5>
+
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
+        <ul class="collapse show mt-3" id="educationCollapse">
+          <li class="d-flex mb-4">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <strong>The University of Manchester - Manchester</strong><br />
+              Master's degree in computer software engineering<br />
+              <small class="text-muted">October 2024 to December 2026</small>
+            </div>
+          </li>
+          <li class="d-flex mb-4">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <strong>The University of Manchester - Manchester</strong><br />
+              Master's degree in computer software engineering<br />
+              <small class="text-muted">October 2024 to December 2026</small>
+            </div>
+          </li>
+          <li class="d-flex mb-4">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <strong>The University of Manchester - Manchester</strong><br />
+              Master's degree in computer software engineering<br />
+              <small class="text-muted">October 2024 to December 2026</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="card card-custom bg-white">
+        <div
+          class="header-toggle"
+          data-bs-toggle="collapse"
+          data-bs-target="#experienceCollapse"
+          aria-expanded="true"
+          aria-controls="experienceCollapse"
+        >
+          <h5 class="mb-0 fs-4 fw-bold hover-title">
+            Experience<span><i class="fa-solid fa-chevron-right"></i></span>
+          </h5>
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
+        <ul class="collapse show mt-3" id="experienceCollapse">
+          <li class="d-flex mb-4">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div>
+              <strong>Senior Software Engineer</strong><br />
+              Google - American<br />
+              <small class="text-muted">November 2020 to December 2026</small
+              ><br />
+              <small
+                >Work in Google is one of the beautiful experiences I can do in
+                my entire career.</small
+              >
+            </div>
+          </li>
+          <li class="d-flex mb-3">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div>
+              <strong>Senior Software Engineer</strong><br />
+              Google - American<br />
+              <small class="text-muted">November 2020 to December 2026</small
+              ><br />
+              <small
+                >Work in Google is one of the beautiful experiences I can do in
+                my entire career.</small
+              >
+            </div>
+          </li>
+          <li class="d-flex mb-3">
+            <div class="timeline-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div>
+              <strong>Senior Software Engineer</strong><br />
+              Google - American<br />
+              <small class="text-muted">November 2020 to December 2026</small
+              ><br />
+              <small
+                >Work in Google is one of the beautiful experiences I can do in
+                my entire career.</small
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
